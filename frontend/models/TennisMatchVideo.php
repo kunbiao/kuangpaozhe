@@ -35,7 +35,6 @@ class TennisMatchVideo extends Common
             'game_num' => $gameNum,
             'round_num' => $roundNum,
         );
-
         return TennisMatchVideo::find()->where($where)->count() != 0;
     }
 
@@ -43,7 +42,6 @@ class TennisMatchVideo extends Common
     {
         // TODO 所有数据的存入，在yii框架中，都要做数据校验，这个目的是为了确保客户端出现错误的代码上传
         $dataAttr = $this->buildAttrDataFromString(isset($params['dataAttr']) ? $params['dataAttr'] : '');
-
         // insert match statistics table
         $matchVideoData = array(
             // 比赛id
@@ -78,9 +76,9 @@ class TennisMatchVideo extends Common
 
             'dataAttr' => $dataAttr,
 
-            'create_time' => date('Y-m-d h:i:s')
+            'create_time' => date('Y-m-d H:i:s')
         );
-
+//        var_dump($matchVideoData);die;
         $res = $this->addRecord($matchVideoData);
         if (empty($res)) {
 //            trace('insert TennisMatchVideo with [' . json_encode($matchVideoData) . '] failed.', 'insertMatchData', 'DEBUG', true);

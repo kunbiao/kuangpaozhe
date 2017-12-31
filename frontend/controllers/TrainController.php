@@ -124,7 +124,7 @@ class TrainController extends CommonController
         $this->outputMsg();
     }
 
-    public function submitRoundEventAction()
+    public function actionSubmitRoundEvent()
     {
         $this->_func = __FUNCTION__;
         $this->chkDebug();
