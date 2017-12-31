@@ -20,7 +20,6 @@ class CourtController extends \frontend\controllers\CommonController
 
     public function actionGetCourtInfo()
     {
-
         $this->_func = __FUNCTION__;
         //错误信息
         $this->chkGroundData();

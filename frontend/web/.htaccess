@@ -1,7 +1,8 @@
  RewriteEngine on
 
- # 如果是一个目录或者文件，就访问目录或文件
+# # 如果是一个目录或者文件，就访问目录或文件
  RewriteCond %{REQUEST_FILENAME} !-d
- # 如果文件存在，就直接访问文件，不进行下面的RewriteRule
+# # 如果文件存在，就直接访问文件，不进行下面的RewriteRule
  RewriteCond %{REQUEST_FILENAME} !-f
- RewriteRule . index.php
+# RewriteRule .* index.php
+RewriteRule (\w+)\/(\w+)\/(\w+_\w+)\/(\d+\.\d+) index.php?$3=$4 [L,E=PATH_INFO:$1/$2,E=REQUEST_URI:$1/$2?$3=$4]

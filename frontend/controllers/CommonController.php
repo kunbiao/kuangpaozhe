@@ -88,7 +88,6 @@ class CommonController extends zController
     protected function getURIParams()
     {
         $request = Yii::$app->request;
-
         $this->_params = $request->get();
     }
 
