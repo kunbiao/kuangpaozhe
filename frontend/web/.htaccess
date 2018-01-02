@@ -5,4 +5,4 @@
 # # 如果文件存在，就直接访问文件，不进行下面的RewriteRule
  RewriteCond %{REQUEST_FILENAME} !-f
 # RewriteRule .* index.php
-RewriteRule (\w+)\/(\w+)\/(\w+_\w+)\/(\d+\.\d+) index.php?$3=$4 [L,E=PATH_INFO:$1/$2,E=REQUEST_URI:$1/$2?$3=$4]
+RewriteRule (\w+)\/(\w+)\/(\w+)\/(\w+_\w+)\/(\d+\.\d+) index.php?$4=$5 [L,E=PATH_INFO:$2/$3,E=REQUEST_URI:$2/$3?$4=$5]
