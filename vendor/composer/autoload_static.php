@@ -31,6 +31,10 @@ class ComposerStaticInit749da61f01db5cb17dfe3dac46675816
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'd' => 
+        array (
+            'dosamigos\\qrcode\\' => 17,
+        ),
         'c' => 
         array (
             'cebe\\markdown\\' => 14,
@@ -114,6 +118,10 @@ class ComposerStaticInit749da61f01db5cb17dfe3dac46675816
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+        ),
+        'dosamigos\\qrcode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/2amigos/yii2-qrcode-helper/src',
         ),
         'cebe\\markdown\\' => 
         array (
