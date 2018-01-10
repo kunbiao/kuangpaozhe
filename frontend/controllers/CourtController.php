@@ -24,7 +24,7 @@ class CourtController extends \frontend\controllers\CommonController
         //错误信息
         $this->chkGroundData();
         $groundID = $this->_postData['ground_id'];
-    
+
         $Court=new Court();
         $courtInfo = $Court->getCourtInfo($groundID);
 

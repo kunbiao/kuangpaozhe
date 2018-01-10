@@ -17,7 +17,7 @@ $input = new \WxPayUnifiedOrder();
 $input->SetBody("test"); //设置商品或支付单简要描述
 $input->SetAttach("test");//设置附加数据，在查询API和支付通知中原样返回，该字段主要用于商户携带订单的自定义数据
 $input->SetOut_trade_no(\WxPayConfig::MCHID.date("YmdHis"));//设置商户系统内部的订单号,32个字符内、可包含字母, 其他说明见商户订单号
-$input->SetTotal_fee("1");//设置订单总金额，只能为整数，详见支付金额
+$input->SetTotal_fee("600");//设置订单总金额，只能为整数，详见支付金额
 $input->SetTime_start(date("YmdHis"));//获取订单总金额，只能为整数，详见支付金额的值
 $input->SetTime_expire(date("YmdHis", time() + 600));
 $input->SetGoods_tag("test");//设置商品标记，代金券或立减优惠功能的参数，说明详见代金券或立减优惠
@@ -41,7 +41,7 @@ $url2 = $result["code_url"];
 //        var_dump(json_encode(1));
         $data[1]=22;
 //        var_dump($data);die;
-       return json_encode($data);
+//       return json_encode($data);
 //        Freedom::yell();
         $a=$this->actionPay();
         echo '<img src=http://paysdk.weixin.qq.com/example/qrcode.php?data='.urlencode($a).'>';

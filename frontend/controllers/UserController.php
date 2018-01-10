@@ -36,7 +36,7 @@ class UserController extends \frontend\controllers\CommonController
         $this->outputMsg();
     }
 
-    public function getTokenAction()
+    public function actionGetToken()
     {
         header("Content-Type:text/html; charset=gbk");
         $url='https://api.weixin.qq.com/sns/userinfo?access_token=';
